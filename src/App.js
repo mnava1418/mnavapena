@@ -1,4 +1,6 @@
 import React from 'react';
+import Main from './components/Main'
+import './styles/App.css'
 //import { useSelector, useDispatch } from 'react-redux';
 //import { main, selectName } from './features/rootReducer'
 
@@ -7,8 +9,7 @@ function App() {
   const dispatch = useDispatch();
   dispatch(main())*/
   return (
-    <div>
-    </div>
+      <Main />
   );
 }
 
