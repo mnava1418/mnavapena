@@ -9,7 +9,9 @@ function App() {
   const dispatch = useDispatch();
   dispatch(main())*/
   return (
+    <div style={{height: 100+'%'}}>
       <Main />
+    </div>
   );
 }
 
