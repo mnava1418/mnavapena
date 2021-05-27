@@ -1,29 +1,22 @@
 import React from 'react';
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import {app} from '../config'
 
-function NavBar() {
-  return (
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark navBar-main">
-    <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#Home">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#Home">Features</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#Home">Pricing</a>
-        </li>
-        </ul>
-    </div>
-    </div>
-    </nav>
-    
-  );
+class MainBar extends React.Component {
+    render() {
+        return (
+            <Navbar fixed="top" variant="dark" expand="lg" className="main-navBar">
+                <Navbar.Brand href={`mailto:${app.email}`} className="navBar-brand">{app.email}</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link href="#home">Home</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+        )
+    }
 }
 
-export default NavBar;
+export default MainBar;
