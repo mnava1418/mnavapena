@@ -3,23 +3,37 @@ html, body {
     font-family: 'Roboto', sans-serif ;
 }
 
-/*.home {
+main {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: url('../img/mainImage.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
 }
 
-.main {
-    height: 100%;
-    width: 100%;
-    padding-top: 56px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
+main::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/**GENERICS**/
+.bg-image {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-image-cover {
+    background-size: cover;
+}
+
+.bg-image-contain {
+    background-size: contain;
+}
+
+/**END-GENERICS**/
 
 .main-navBar {
     background-color: black !important;
@@ -31,42 +45,21 @@ html, body {
     font-size: 1rem;
 }
 
-/*.main-banner {
-    height: 90%;
-    width: 85%;
+.main-logo {
+    width: 90%;
+    height: 50vh;
     background-image: url('../img/mainIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     position: absolute;
 }
-
-.home::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-@media (min-width: 576px) { 
-    .main-banner {
-        width: 60%;
-    }
-  }
-
-  @media (min-width: 1200px) { 
-    .main-banner {
-        width: 50%;
-    }
-  }*/
 
 @media (min-width: 576px) { }
 
 /*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) { }
+@media (min-width: 768px) {
+    .main-logo {
+        width: 80%;
+    }
+ }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { 
@@ -74,10 +67,18 @@ html, body {
         width: 100%;
         justify-content: flex-end;
     }
+
+    .main-logo {
+        width: 70%;
+    }
 }
 
 /*X-Large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) { }
+@media (min-width: 1200px) { 
+    .main-logo {
+        width: 50%;
+    }
+}
 
 /*XX-Large devices (larger desktops, 1400px and up)*/
 @media (min-width: 1400px) { }
