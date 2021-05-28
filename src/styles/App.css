@@ -34,6 +34,50 @@ main::before {
     background-size: contain;
 }
 
+.btn {
+    text-decoration: none;
+    margin: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 54px;
+    padding: 8px 32px 8px 32px;
+}
+
+.btn-primary {
+    border-color: #798088;
+    color: #798088;
+    background-color: transparent;
+}
+
+.btn-primary:hover {
+    color: #798088;
+    background-color: transparent;
+    border-color: #798088;
+    transform: scale(1.1);
+}
+
+.btn-secondary {
+    border-color: #0B67AA;
+    color: white;
+    background-color: #0B67AA;
+}
+
+.btn-secondary:hover {
+    border-color: #0B67AA;
+    color: white;
+    background-color: #0B67AA;
+    transform: scale(1.1);
+}
+
+.align-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
 /**END-GENERICS**/
 
 .main-navBar {
@@ -44,6 +88,14 @@ main::before {
 
 .navBar-brand {
     font-size: 1rem;
+}
+
+.navbar-dark .navbar-brand {
+    color: #798088;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #798088;
 }
 
 .main-items {
@@ -63,6 +115,10 @@ main::before {
     color: #798088;
 }
 
+.main-links {
+    margin-top: 16px;
+}
+
 .link-icon {
     color: #798088;
     text-decoration: none;
@@ -78,6 +134,10 @@ main::before {
 @media (min-width: 576px) { 
     .main-logo {
         height: 150px;
+    }
+
+    .align-items {
+        flex-direction: row;
     }
 }
 
@@ -106,12 +166,20 @@ main::before {
     .main-logo {
         height: 220px;
     }
+
+    .main-links {
+        margin-top: 32px;
+    }
 }
 
 /*X-Large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 
     .main-items {
         width: 50%;
+    }
+
+    .main-links {
+        margin-top: 64px;
     }
 }
 
