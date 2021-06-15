@@ -30,3 +30,74 @@ export const serviceInfo = [
     },
 ]
     
+export const educationInfo = [
+    {
+        id: 1,
+        title: 'Carnegie Mellon University',
+        subtitle: '2015 - 2017',
+        text: 'M.S. in Information Technology',
+    },
+    {
+        id: 2,
+        title: 'Tecnológico de Monterrey',
+        subtitle: '2015 - 2017',
+        text: 'M.S. in Information Technologies Management',
+    },
+    {
+        id: 3,
+        title: 'Universidad Panamericana',
+        subtitle: '2011 - 2012',
+        text: 'Specialist in Project Management and Engineering',
+    },
+    {
+        id: 4,
+        title: 'Universidad Panamericana',
+        subtitle: '2007 - 2011',
+        text: 'B.S in Information Technologies and Intelligent Systems',
+    }
+]
+
+export const workHistoryInfo = [
+    {
+        id: 1,
+        title: 'Goldman Sachs',
+        subtitle: 'Jan 2019-To Date',
+        text: 'Vice President, FX Trading and Sales Technology',
+    },
+    {
+        id: 2,
+        title: 'Goldman Sachs',
+        subtitle: 'Jan 2017 - Dec 2018',
+        text: 'Associate, FX Trading and Sales Technology',
+    },
+    {
+        id: 3,
+        title: 'Goldman Sachs',
+        subtitle: 'Oct 2015 - Dec 2016',
+        text: 'Analyst, FX Trading and Sales Technology',
+    },
+    {
+        id: 4,
+        title: 'Adquira México',
+        subtitle: 'Oct 2012 - Oct 2015',
+        text: 'Software Engineer',
+    },
+    {
+        id: 5,
+        title: 'Swat Consulting Services',
+        subtitle: 'Jun 2012 - Oct 2012',
+        text: 'Software Development Manager',
+    },
+    {
+        id: 6,
+        title: 'BBVA Bancomer',
+        subtitle: 'May 2011 - Jun 2012',
+        text: 'Junior Software Engineer',
+    },
+    {
+        id: 7,
+        title: 'Adquira México',
+        subtitle: 'Nov 2009 - May 2011',
+        text: 'Junior Software Engineer',
+    }
+]

@@ -13,6 +13,7 @@ class MainBar extends React.Component {
                     <Nav className="mr-auto">
                         <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#services">Services</Nav.Link>
+                        <Nav.Link href="#resume">Resume</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

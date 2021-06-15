@@ -16,7 +16,7 @@ const getServices = () => {
                             <Card.Body>
                                 <Card.Title className="card-primary-title d-flex flex-row justify-content-start align-items-center">
                                     <div>
-                                        <i class={service.icon} style={{fontSize: '2rem', marginRight: '8px'}} />
+                                        <i className={service.icon} style={{fontSize: '2rem', marginRight: '8px'}} />
                                     </div>
                                     <div>
                                         {service.title}

@@ -20,12 +20,25 @@ main::before {
     right: 0;
 }
 
+section {
+    width: 100%;
+    min-height: 500px;
+}
+
 /**TITLES**/
 h1 {
     font-size: 2em;
     font-family: 'Roboto', sans-serif ;
     font-weight: bold;
     margin-top: 40px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif ;
+    font-weight: bold;
+    margin-top: 24px;
     margin-bottom: 8px;
 }
 
@@ -99,12 +112,26 @@ h1 {
     min-height: 500px;
 }
 
+.section-secondary {
+    background-color: black;
+    color: #798088;
+}
+
 .card-primary {
     background-color: black;
     color: #798088;
 }
 
 .card-primary:hover {
+    transform: scale(1.05);
+}
+
+.card-secondary {
+    background-color: black;
+    color: #798088;
+}
+
+.card-secondary:hover {
     transform: scale(1.05);
 }
 

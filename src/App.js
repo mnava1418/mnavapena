@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './components/NavBar'
 import Main from './components/Main'
 import Services from './components/Services'
+import Resume from './components/Resume'
 
 class App extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class App extends React.Component {
           <Main />
         </header>
         <Services />
+        <Resume />
       </div>
     );
   }
