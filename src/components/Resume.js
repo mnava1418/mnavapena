@@ -2,52 +2,17 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
+import ResumeCard from './elements/ResumeCard'
 import {educationInfo, workHistoryInfo} from '../config'
 
-const getEducation = () => {
+const getElements = (title, elements) => {
     return (
         <Row xs={1}>
-            <Col className="d-flex justify-content-center"><h2>Education</h2></Col>
-            {educationInfo.map((element) => {
+            <Col className="d-flex justify-content-center"><h2>{title}</h2></Col>
+            {elements.map((element) => {
                 return (
-                    <Col key={element.id} className="d-flex justify-content-center" style={{padding: '16px'}}>
-                        <Card style={{ width: '18rem' }} className="card-shadow card-secondary">
-                            <Card.Body>
-                                <Card.Title className="card-primary-title d-flex flex-row justify-content-start align-items-center">                                        
-                                    {element.title}
-                                </Card.Title>
-                                <Card.Subtitle className="mb-2 text-muted">{element.subtitle}</Card.Subtitle>
-                                <Card.Text>
-                                    {element.text}
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                )
-            })}
-        </Row>
-    )
-}
-
-const getWorkHistory = () => {
-    return (
-        <Row xs={1}>
-            <Col className="d-flex justify-content-center"><h2>Work History</h2></Col>
-            {workHistoryInfo.map((element) => {
-                return (
-                    <Col key={element.id} className="d-flex justify-content-center" style={{padding: '16px'}}>
-                        <Card style={{ width: '18rem' }} className="card-shadow card-secondary">
-                            <Card.Body>
-                                <Card.Title className="card-primary-title d-flex flex-row justify-content-start align-items-center">                                        
-                                    {element.title}
-                                </Card.Title>
-                                <Card.Subtitle className="mb-2 text-muted">{element.subtitle}</Card.Subtitle>
-                                <Card.Text>
-                                    {element.text}
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
+                    <Col key={element.id} className="d-flex justify-content-center" style={{padding: '16px'}}>                        
+                        <ResumeCard title={element.title} subtitle={element.subtitle} text={element.text} />
                     </Col>
                 )
             })}
@@ -67,10 +32,10 @@ class Resume extends React.Component {
                     </Row>
                     <Row xs={1} md={2}>
                         <Col className="d-flex justify-content-center align-items-start">
-                            {getWorkHistory()}
+                            {getElements('Work History',workHistoryInfo)}
                         </Col>
                         <Col className="d-flex justify-content-center align-items-start">
-                            {getEducation()}
+                            {getElements('Education', educationInfo)}
                         </Col>
                     </Row>
                 </Container>

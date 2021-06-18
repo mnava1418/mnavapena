@@ -2,7 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
+import ServiceCard from './elements/ServiceCard'
 import {serviceInfo} from '../config'
 
 const getServices = () => {
@@ -11,22 +11,7 @@ const getServices = () => {
             {serviceInfo.map((service) => {
                 return (
                     <Col key={service.id} className="d-flex justify-content-center" style={{padding: '24px'}}>
-                        <Card style={{ width: '18rem' }} className="card-shadow card-primary">
-                            <Card.Header className={`card-header bg-image bg-image-cover ${service.section}`} />
-                            <Card.Body>
-                                <Card.Title className="card-primary-title d-flex flex-row justify-content-start align-items-center">
-                                    <div>
-                                        <i className={service.icon} style={{fontSize: '2rem', marginRight: '8px'}} />
-                                    </div>
-                                    <div>
-                                        {service.title}
-                                    </div>
-                                </Card.Title>
-                                <Card.Text>
-                                    {service.text}                                    
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
+                        <ServiceCard section={service.section} icon={service.icon} title={service.title} text={service.text} />
                     </Col>
                 )
             })}
