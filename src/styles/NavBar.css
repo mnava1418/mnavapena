@@ -1,0 +1,39 @@
+.main-navBar {
+    width: 100%;
+    background-color: black !important;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.navBar-brand {
+    font-size: 1rem;
+}
+
+.navbar-dark .navbar-brand {
+    color: #798088;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #798088;
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+    .navbar-nav {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .main-navBar,  .navBar-brand{
+        font-size: 1.2rem;
+    }
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .main-navBar {
+        width: 75%;
+    }
+}
