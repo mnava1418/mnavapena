@@ -19,6 +19,11 @@
     color: #798088;
 }
 
+.dropdown-item.active, .dropdown-item:active {
+    background-color: transparent;
+    color: #212529;
+}
+
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { 
     .navbar-nav {

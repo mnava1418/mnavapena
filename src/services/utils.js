@@ -8,7 +8,3 @@ export const getLocale = () => {
 
     return locale
 }
-
-export const setLocale = (locale='es') => {
-    localStorage.setItem('locale', locale)
-}
