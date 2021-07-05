@@ -1,31 +1,23 @@
 html, body {
-    background-color: black;
+    background-color: #EAEDED;
     font-family: 'Roboto', sans-serif ;
     color: white;
 }
 
-main {
+.main-app {
     width: 100%;
-    height: 100vh;
-    background-image: url('../img/mainImage.jpg');
+    min-height: 100vh;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 
-main::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-section {
+/*section {
     width: 100%;
     min-height: 500px;
 }
 
-/**TITLES**/
+/**TITLES*
 h1 {
     font-size: 2em;
     font-family: 'Roboto', sans-serif ;
@@ -45,9 +37,11 @@ h2 {
 .title-pre {
     color: #0B67AA;
 }
-/**END-TITLES**/
+/**END-TITLES*
 
-/**GENERICS**/
+/****GENERICS***/
+
+/*Images*/
 .bg-image {
     background-repeat: no-repeat;
     background-position: center;
@@ -60,7 +54,9 @@ h2 {
 .bg-image-contain {
     background-size: contain;
 }
+/*End Image*/
 
+/*Buttons*/
 .btn {
     text-decoration: none;
     margin: 8px;
@@ -95,16 +91,9 @@ h2 {
     background-color: #0B67AA;
     transform: scale(1.1);
 }
+/*End Buttons*/
 
-.align-items {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
+/*
 .section-primary {
     width: 100%;
     background-color: whitesmoke;
@@ -158,58 +147,7 @@ h2 {
 .card-shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/**END-GENERICS**/
-
-.main-navBar {
-    background-color: black !important;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-.navBar-brand {
-    font-size: 1rem;
-}
-
-.navbar-dark .navbar-brand {
-    color: #798088;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #798088;
-}
-
-.main-items {
-    width: 90%;
-    position: absolute;
-}
-
-.main-logo {
-    width: 100%;
-    height: 100px;
-    background-image: url('../img/mainIcon.png');
-}
-
-.main-icons {
-    width: 100%;
-    height: 80px;
-    color: #798088;
-}
-
-.main-links {
-    margin-top: 16px;
-}
-
-.link-icon {
-    color: #798088;
-    text-decoration: none;
-    margin-left: 8px;
-    margin-right: 8px;
-}
-
-.link-icon:hover {
-    color: #0B67AA;
-    transform: scale(1.3);
-}
+/**END-GENERICS*
 
 .section-crypto {
     background-image: url('../img/blockchain.jpg');
@@ -221,59 +159,11 @@ h2 {
 
 .section-webapp {
     background-image: url('../img/webapp.jpg');
-}
-
-@media (min-width: 576px) { 
-    .main-logo {
-        height: 150px;
-    }
-
-    .align-items {
-        flex-direction: row;
-    }
-}
-
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-    .main-items {
-        width: 80%;
-    }
-
-    .main-logo {
-        height: 170px;
-    }
- }
-
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) { 
-    .navbar-nav {
-        width: 100%;
-        justify-content: flex-end;
-    }
-
-    .main-items {
-        width: 70%;
-    }
-
-    .main-logo {
-        height: 220px;
-    }
-
-    .main-links {
-        margin-top: 32px;
-    }
-}
+}*/
 
 /*X-Large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 
-    .main-items {
-        width: 50%;
-    }
-
-    .main-links {
-        margin-top: 64px;
+    .main-app {
+        width: 75%;
     }
 }
-
-/*XX-Large devices (larger desktops, 1400px and up)*/
-@media (min-width: 1400px) { }
