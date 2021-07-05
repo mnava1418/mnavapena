@@ -101,3 +101,22 @@ export const workHistoryInfo = [
         text: 'Junior Software Engineer',
     }
 ]
+
+export const mainIcons = [
+    {
+        href: `mailto:${app.email}`,
+        icon: 'bi bi-envelope-fill',
+    },
+    {
+        href: app.linkedin,
+        icon: 'bi bi-linkedin',
+    },
+    {
+        href: app.github,
+        icon: 'bi bi-github',
+    },
+    {
+        href: app.whatsapp,
+        icon: 'bi bi-whatsapp',
+    },
+]

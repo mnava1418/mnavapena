@@ -1,34 +1,46 @@
+
 import React from 'react';
 import NavBar from './components/NavBar'
 import Main from './components/Main'
 import Services from './components/Services'
 import Resume from './components/Resume'
+import '../src/styles/App.css';
 import {connect} from 'react-redux'
 
 import {getLocale} from './services/utils'
 import {setSiteInteraction} from './store/interactions'
+import {siteInfoSelector} from './store/selectors'
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.locale = getLocale()
+  }
+
   componentDidMount () {
-    setSiteInteraction(getLocale(), this.props.dispatch)
+    setSiteInteraction(this.locale, this.props.dispatch)
   }
 
   render() {
+    const {menu, main} = this.props.siteInfo
+
     return (
-      <div>
+      <div className='main-app'>
         <header>
-          <NavBar />
-          <Main />
+          <NavBar menu={menu} locale={this.locale}/>
+          <Main mainLinks={main}/>
         </header>
-        <Services />
-        <Resume />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {}
-}
+const mapStateToProps = (state) => ({
+    siteInfo: siteInfoSelector(state)
+})
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(App)
+
+/*
+        <Services />
+        <Resume /> */

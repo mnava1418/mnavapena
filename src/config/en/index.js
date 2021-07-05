@@ -1,7 +1,9 @@
 import menu from './menu'
+import main from './main'
 
 const site = {
-    menu
+    menu,
+    main
 }
 
 export default site
