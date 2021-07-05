@@ -5,17 +5,14 @@ import Nav from 'react-bootstrap/Nav'
 import {connect} from 'react-redux'
 import {app} from '../config'
 import '../styles/NavBar.css'
-import {getLocale} from '../services/utils'
 import {setSiteInteraction} from '../store/interactions'
 
 class MainBar extends React.Component {
     constructor(props) {
         super(props)
-        const currLocale = getLocale()
-
+        
         this.state = {
-            locale: currLocale,
-            localeIcon: this.getLocaleIcon(currLocale)
+            localeIcon: this.getLocaleIcon(props.locale)
         }
     }
 
