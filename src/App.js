@@ -1,4 +1,3 @@
-
 import React from 'react';
 import NavBar from './components/NavBar'
 import Main from './components/Main'
@@ -22,7 +21,7 @@ class App extends React.Component {
   }
 
   render() {
-    const {menu, main} = this.props.siteInfo
+    const {menu, main, services} = this.props.siteInfo
 
     return (
       <div className='main-app'>
@@ -30,6 +29,7 @@ class App extends React.Component {
           <NavBar menu={menu} locale={this.locale}/>
           <Main mainLinks={main}/>
         </header>
+        <Services info={services}/>
       </div>
     );
   }
@@ -40,7 +40,3 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps)(App)
-
-/*
-        <Services />
-        <Resume /> */
