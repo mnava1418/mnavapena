@@ -1,6 +1,6 @@
 import React from 'react';
 import MainIcon from './MainIcon';
-import {app, mainIcons} from '../config'
+import {mainIcons} from '../config'
 import '../styles/Main.css'
 
 class Main extends React.Component {
