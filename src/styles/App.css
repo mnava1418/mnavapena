@@ -6,18 +6,20 @@ html, body {
 
 .main-app {
     width: 100%;
+    position: relative;
     min-height: 100vh;
     background-color: white;
     margin: 0 auto;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 
-/*section {
+section {
     width: 100%;
-    min-height: 500px;
+    min-height: 800px;
+    position: relative;
 }
 
-/**TITLES*
+/**TITLES*/
 h1 {
     font-size: 2em;
     font-family: 'Roboto', sans-serif ;
@@ -34,9 +36,23 @@ h2 {
     margin-bottom: 8px;
 }
 
+h3 {
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif ;
+    font-weight: normal;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
 .title-pre {
     color: #0B67AA;
 }
+
+.title {
+    text-align: center;
+    margin: 24px 0px 24px 0px;
+}
+
 /**END-TITLES*
 
 /****GENERICS***/
@@ -93,73 +109,20 @@ h2 {
 }
 /*End Buttons*/
 
-/*
+/*Sections*/
 .section-primary {
     width: 100%;
-    background-color: whitesmoke;
+    background-color: white;
     color: black;
-    min-height: 500px;
 }
 
 .section-secondary {
     background-color: black;
     color: #798088;
 }
+/*End Sections*/
 
-.card-primary {
-    background-color: black;
-    color: #798088;
-}
-
-.card-primary:hover {
-    transform: scale(1.05);
-}
-
-.card-secondary {
-    background-color: black;
-    color: #798088;
-}
-
-.card-secondary:hover {
-    transform: scale(1.05);
-}
-
-.card-header {
-    height: 120px;   
-    background-color: white;
-}
-
-.card-header::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;    
-    left: 0;
-    right: 0;
-    height: 120px;
-}
-
-.card-primary-title {
-    color:#0B67AA;
-    margin-bottom: 16px;
-}
-
-.card-shadow {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-/**END-GENERICS*
-
-.section-crypto {
-    background-image: url('../img/blockchain.jpg');
-}
-
-.section-mobile {
-    background-image: url('../img/mobile.jpg');
-}
-
-.section-webapp {
-    background-image: url('../img/webapp.jpg');
-}*/
+/****END GENERICS***/
 
 /*X-Large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 

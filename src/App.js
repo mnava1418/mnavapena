@@ -2,7 +2,6 @@ import React from 'react';
 import NavBar from './components/NavBar'
 import Main from './components/Main'
 import Services from './components/Services'
-import Resume from './components/Resume'
 import '../src/styles/App.css';
 import {connect} from 'react-redux'
 
