@@ -7,7 +7,7 @@ class Main extends React.Component {
   getIcons () {
     return (
       <div className="main-icons d-flex flex-row justify-content-center align-items-center">
-        {mainIcons.map((element) => (<MainIcon key={element.icon} href={element.href} icon={element.icon} />))}
+        {mainIcons.map((element, index) => (<MainIcon key={index} href={element.href} icon={element.icon} />))}
       </div>
     )
   }
@@ -16,7 +16,7 @@ class Main extends React.Component {
     if(mainLinks) {
       return (        
         <div className="align-items main-links">
-          {mainLinks.map((element) => (<a key={element.id} href={element.link} className={element.class}>{element.label}</a>))}
+          {mainLinks.map((element, index) => (<a key={index} href={element.link} className={element.class}>{element.label}</a>))}
         </div>
       )
     }
