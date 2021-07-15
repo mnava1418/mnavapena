@@ -1,7 +1,7 @@
 html, body {
-    background-color: #EAEDED;
+    background-color: black;
     font-family: 'Roboto', sans-serif ;
-    color: white;
+    color: #798088;
 }
 
 .main-app {
@@ -10,7 +10,6 @@ html, body {
     min-height: 100vh;
     background-color: white;
     margin: 0 auto;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 
 section {
@@ -123,10 +122,3 @@ h3 {
 /*End Sections*/
 
 /****END GENERICS***/
-
-/*X-Large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) { 
-    .main-app {
-        width: 75%;
-    }
-}
