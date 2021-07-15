@@ -1,7 +1,6 @@
 const menu = {
     home: 'Inicio',
-    services: 'Servicios',
-    resume: 'Carrera'
+    services: 'Servicios'
 }
 
 export default menu
