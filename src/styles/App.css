@@ -8,7 +8,6 @@ html, body {
     width: 100%;
     position: relative;
     min-height: 100vh;
-    background-color: white;
     margin: 0 auto;
 }
 
@@ -122,3 +121,10 @@ h3 {
 /*End Sections*/
 
 /****END GENERICS***/
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .main-app {
+        width: 75%;
+    }
+}
