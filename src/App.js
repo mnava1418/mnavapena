@@ -1,41 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react'
 import NavBar from './components/NavBar'
 import Main from './components/Main'
-import Services from './components/Services'
-import '../src/styles/App.css';
-import {connect} from 'react-redux'
+import '../src/styles/App.css'
 
-import {getLocale} from './services/utils'
-import {setSiteInteraction} from './store/interactions'
-import {siteInfoSelector} from './store/selectors'
+import {getLocale, getSiteInfo} from './services/utils'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.locale = getLocale()
-  }
+function App() {
+  const locale = getLocale()
+  const [siteInfo, setSiteInfo] = useState(getSiteInfo(locale))
 
-  componentDidMount () {
-    setSiteInteraction(this.locale, this.props.dispatch)
-  }
-
-  render() {
-    const {menu, main, services} = this.props.siteInfo
-
-    return (
-      <div className='main-app'>
-        <header>
-          <NavBar menu={menu} locale={this.locale}/>
-          <Main mainLinks={main}/>
-        </header>
-        <Services info={services}/>
-      </div>
-    );
-  }
+  return (
+    <div className='main-app'>
+      <header>
+        <NavBar menu={siteInfo.menu} locale={locale} setSiteInfo={setSiteInfo}/>
+        <Main mainLinks={siteInfo.main}/>
+      </header>
+    </div>
+  )
 }
 
-const mapStateToProps = (state) => ({
-    siteInfo: siteInfoSelector(state)
-})
-
-export default connect(mapStateToProps)(App)
+export default App
